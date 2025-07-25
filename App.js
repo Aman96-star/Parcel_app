@@ -1,91 +1,78 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("h1", {}, "Namaste Everyone!");
-const jsxsyntax =<h1>hello this is a jsx syntax</h1>;
+/**
+ *header
+ -logo
+ -nav items
 
-// both jsx and react create element are used to make a react element ,but jsx and react core element are different
+ * body
+ -search
+ -resturant container
+ -resturant card
 
-// It's a syntax that looks like HTML inside JavaScript.
+ * footer
+ -copywrite
+ -links 
+ -address
+ -contact
+  **/
+const Header =() =>{
+return(
+ <>
+  <div className="header">
+    <div className="logo-container">
+      <img
+        className="logo"
+        src="https://brandlogo.org/wp-content/uploads/2024/09/Perplexity-AI-App-Icon-2023.png.webp"
+        alt="Logo"
+      />
+    </div>
 
-// Makes code more readable and concise.
-
-// Must be compiled by Babel into JavaScript.
-
-// It's a plain JavaScript object.
-
-// Created using React.createElement().
-
-// React uses it internally to render UI.
-
-// {
-//     {
-//         {
-//             {
-//                 {
-//                     {
-//                         {
-//                             {
-//                                 {
-
-//                                 }
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-
-// this  is a  react element*****
-const ele = (
-    <h2 className="head">
-        this is a arrow function
-    </h2>
+    <div className="nav-items">
+      <ul>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+        <li>Add to Cart</li>
+        <li>Wishlist</li>
+      </ul>
+    </div>
+  </div>
+</>
 )
+}
 
-// this is a react functional component and name should be from capital letter
-const Compo = () =>{
-    return (
-        <>
-       
-    <h2 className="head">
-        this is react functional component  
-    </h2>
-        </>
+const ResturantCard =() =>{
+    return(
+        <div className="res-card"> 
+        <h3>pizzahut</h3>
+        </div>
     )
 }
 
+const Body =()=>{
+    return(
+        <div >
+            <div className="search">Search</div>
+            <div className="res-container">
+                <ResturantCard/>
+            </div>
+        </div>
+    )
+}
+
+ const AppLayout =() =>{
+    return(
+        <div className="app">
+            <Header/>
+            <Body/>
+        </div>
+    )
+ }
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Compo/>); // ✅ Pass the element here
+root.render(<AppLayout/>); // ✅ Pass the element here
 
-// dfkomodifm
 
-// const heading = React.createElement(
-//     "h1",
-//     {
-//         id: "title",
-//     },
-//     "Heading 1"
-// );
-
-// const heading2 = React.createElement(
-//     "h2",
-//     {
-//         id: "title",
-//     },
-//     "Heading 2"
-// );
-
-// const container = React.createElement(
-//     "div",
-//     null,
-//     heading,
-//     heading2
-// );
-
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(container);
 

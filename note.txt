@@ -1,0 +1,72 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const heading = React.createElement("h1", {}, "Namaste Everyone!");
+const jsxsyntax =<h1>hello this is a jsx syntax</h1>;
+
+// both jsx and react create element are used to make a react element ,but jsx and react core element are different
+
+// It's a syntax that looks like HTML inside JavaScript.
+
+// Makes code more readable and concise.
+
+// Must be compiled by Babel into JavaScript.
+
+// It's a plain JavaScript object.
+
+// Created using React.createElement().
+
+// React uses it internally to render UI.
+
+
+
+// this  is a  react element*****
+const ele = (
+    <h2 className="head">
+        this is a arrow function
+    </h2>
+)
+
+// this is a react functional component and name should be from capital letter
+const Compo = () =>{
+    return (
+        <>
+       
+    <h2 className="head">
+        this is react functional component  
+    </h2>
+        </>
+    )
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Compo/>); // ✅ Pass the element here
+
+// dfkomodifm
+
+// const heading = React.createElement(
+//     "h1",
+//     {
+//         id: "title",
+//     },
+//     "Heading 1"
+// );
+
+// const heading2 = React.createElement(
+//     "h2",
+//     {
+//         id: "title",
+//     },
+//     "Heading 2"
+// );
+
+// const container = React.createElement(
+//     "div",
+//     null,
+//     heading,
+//     heading2
+// );
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(container);
+
