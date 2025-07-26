@@ -43,9 +43,16 @@ return(
 )
 }
 
+// this is a javascript object
+const styleCard ={
+backgroundColor:"#f0f0f0"
+}
+// sfjsdfj
+
 const ResturantCard =() =>{
     return(
-        <div className="res-card"> 
+        // here style we use object
+        <div className="res-card" style={styleCard}> 
         <h3>pizzahut</h3>
         </div>
     )
