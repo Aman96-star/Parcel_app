@@ -47,13 +47,21 @@ return(
 const styleCard ={
 backgroundColor:"#f0f0f0"
 }
-// sfjsdfj
 
-const ResturantCard =() =>{
+
+const ResturantCard =(props) =>{
     return(
         // here style we use object
         <div className="res-card" style={styleCard}> 
-        <h3>pizzahut</h3>
+        <img
+        className="res-logo "
+        alt="res-logo"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN1YTzbCFblk5hT6Ttlw7OnQS1td-i_RFORw&s"
+        />
+        <h4>{props.brand}</h4>
+        <h2>4.4/5</h2>
+        <p>{props.describe}
+        </p>
         </div>
     )
 }
@@ -63,17 +71,41 @@ const Body =()=>{
         <div >
             <div className="search">Search</div>
             <div className="res-container">
+                <ResturantCard
+                brand ="pizzahut"
+                describe="a delicious food from pizzahut"
+                />
+                <ResturantCard 
+                
+                brand ="dominos"
+                describe ="best pizza"
+                />
                 <ResturantCard/>
+                <ResturantCard/>
+                <ResturantCard/>
+                <ResturantCard/>
+                <ResturantCard/>
+                <ResturantCard/>
+                <ResturantCard/>
+                <ResturantCard/>
+                <ResturantCard/>
+                <ResturantCard/>
+                <ResturantCard/>
+                
+                
             </div>
         </div>
     )
 }
 
  const AppLayout =() =>{
+  
     return(
         <div className="app">
             <Header/>
             <Body/>
+          
+
         </div>
     )
  }
