@@ -1,3 +1,4 @@
+
 // this is a javascript object
 const styleCard ={
 backgroundColor:"#f0f0f0"
@@ -11,7 +12,7 @@ const ResturantCard =(props) =>{
         <img
         className="res-logo "
         alt="res-logo"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN1YTzbCFblk5hT6Ttlw7OnQS1td-i_RFORw&s"
+        src="https://res.cloudinary.com/dng2nnvlc/image/upload/v1753969266/photo_2023-10-01_17-57-21_azutqf.jpg"
         />
         <h4>{props.brand}</h4>
         <h2>4.4/5</h2>

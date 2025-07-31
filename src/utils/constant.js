@@ -1,0 +1,1 @@
+export const LOGO_URL ="https://res.cloudinary.com/dng2nnvlc/image/upload/v1753969266/photo_2023-10-01_17-57-21_azutqf.jpg";
