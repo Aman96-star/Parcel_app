@@ -1,3 +1,5 @@
+import { IMG_1 } from "../utils/constant";
+
 
 // this is a javascript object
 const styleCard ={
@@ -11,8 +13,7 @@ const ResturantCard =(props) =>{
         <div className="res-card" style={styleCard}> 
         <img
         className="res-logo "
-        alt="res-logo"
-        src="https://res.cloudinary.com/dng2nnvlc/image/upload/v1753969266/photo_2023-10-01_17-57-21_azutqf.jpg"
+        src={IMG_1}
         />
         <h4>{props.brand}</h4>
         <h2>4.4/5</h2>

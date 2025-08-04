@@ -4,8 +4,6 @@ const Body =()=>{
     return(
         <div >
             
-         {/* sdfdg */}
-         
             <div className="search">Search</div>
             <div className="res-container">
                 <ResturantCard

@@ -1,14 +1,13 @@
-import { LOGO_URL } from "../utils/constant";
 
-const Header =() =>{
+ const Header =() =>{
 return(
  <>
   <div className="header">
     <div className="logo-container">
       <img
         className="logo"
-        // src="https://brandlogo.org/wp-content/uploads/2024/09/Perplexity-AI-App-Icon-2023.png.webp"
-        src={LOGO_URL}
+        src="https://brandlogo.org/wp-content/uploads/2024/09/Perplexity-AI-App-Icon-2023.png.webp"
+        // src={LOGO_URL}
         alt="Logo"
       />
     </div>
