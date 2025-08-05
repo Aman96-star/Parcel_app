@@ -1,36 +1,23 @@
 import ResturantCard from "./Resturantcard";
+import RestaurantList from "../utils/mockdata";
 
 const Body =()=>{
-    return(
-        <div >
-            
-            <div className="search">Search</div>
-            <div className="res-container">
-                <ResturantCard
-                brand ="pizzahut"
-                describe="a delicious food from pizzahut"
-                />
-                <ResturantCard 
-                
-                brand ="dominos"
-                describe ="best pizza"
-                />
-                <ResturantCard/>
-                <ResturantCard/>
-                <ResturantCard/>
-                <ResturantCard/>
-                <ResturantCard/>
-                <ResturantCard/>
-                <ResturantCard/>
-                <ResturantCard/>
-                <ResturantCard/>
-                <ResturantCard/>
-                <ResturantCard/>
-                
-                
-            </div>
-        </div>
-    )
-}
+    return (
+    <div className="res-container">
+      {RestaurantList.map((res) => (
+        <ResturantCard
+          key={res.id}
+          brand={res.brand}
+          rating={res.rating}
+          describe={res.describe}
+          location={res.location}
+          price={res.price}
+          image={res.image}
+        />
+      ))}
+    </div>
+  );
+};
+
 
 export default Body;
