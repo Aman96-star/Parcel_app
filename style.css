@@ -68,3 +68,20 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
+.body .filter{
+width: 20%;
+text-align: center;
+cursor: pointer;
+}
+
+.body .filter:hover .filter-btn{
+  background-color: #bccbdb;  /* blue background */
+  color: rgb(12, 11, 11);          
+}
+
+
+.body .filter .filter-btn{
+  margin: 20px;
+  border: 1px solid black;
+}
