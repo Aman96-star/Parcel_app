@@ -50,7 +50,8 @@ body {
   height: 300px;
   border: 1px solid black;
   background-color: #000;
-  margin: 10px 10px;
+  margin-left: 40px;
+  margin-top: 20px;
 }
 
 .search{
