@@ -1,7 +1,11 @@
 import ResturantCard from "./Resturantcard";
 import RestaurantList from "../utils/mockdata";
+import { useFormState } from "react-dom";
 
 const Body = () => {
+// hooks  state vriable
+
+  // normal js variable
   let RestaurantList =[
       {
         "id": 1,
@@ -44,6 +48,7 @@ const Body = () => {
           
         },
   ];
+  
   return (
     <>
       <div className="body">
