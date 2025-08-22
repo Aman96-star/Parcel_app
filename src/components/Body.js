@@ -1,6 +1,5 @@
+import mockRestaurantList from "../utils/mockdata";
 import ResturantCard from "./Resturantcard";
-import RestaurantList from "../utils/mockdata";
-import { useFormState } from "react-dom";
 import { useEffect, useState } from "react";
 
 const Body = () => {
@@ -12,92 +11,93 @@ const Body = () => {
 
 
   // normal js variable
-  let RestaurantListjs =[
-      {
-        "id": 1,
-        "name": "McDonald's",
-        "rating": 1.6,
-        "deliveryTime": "25-30 mins",
-        "cuisine": ["Burgers", "Beverages", "Cafe"],
-        "location": "Ameerpet metro, L&T Metro Rail",
-        "price": "₹119",
+  // let RestaurantListjs =[
+  //     {
+  //       "id": 1,
+  //       "name": "McDonald's",
+  //       "rating": 1.6,
+  //       "deliveryTime": "25-30 mins",
+  //       "cuisine": ["Burgers", "Beverages", "Cafe"],
+  //       "location": "Ameerpet metro, L&T Metro Rail",
+  //       "price": "₹119",
        
-      },
-        {
-          "id": 2,
-          "name": "KFC",
-          "rating": 1.9,
-          "deliveryTime": "40-45 mins",
-          "cuisine": ["Burgers", "Fast Food", "Rolls"],
-          "location": "Concourse Level",
-          "price": "₹59",
+  //     },
+  //       {
+  //         "id": 2,
+  //         "name": "KFC",
+  //         "rating": 1.9,
+  //         "deliveryTime": "40-45 mins",
+  //         "cuisine": ["Burgers", "Fast Food", "Rolls"],
+  //         "location": "Concourse Level",
+  //         "price": "₹59",
           
-        },
-        {
-          "id": 3,
-          "name": "Pizza Hut",
-          "rating": 4.1,
-          "deliveryTime": "40-45 mins",
-          "cuisine": ["Pizzas"],
-          "location": "SR Nagar",
-          "price": "₹99",
+  //       },
+  //       {
+  //         "id": 3,
+  //         "name": "Pizza Hut",
+  //         "rating": 4.1,
+  //         "deliveryTime": "40-45 mins",
+  //         "cuisine": ["Pizzas"],
+  //         "location": "SR Nagar",
+  //         "price": "₹99",
           
-        },
-        {
-          "id": 4,
-          "name": "Burger King",
-          "rating": 4.2,
-          "deliveryTime": "30-35 mins",
-          "cuisine": ["Burgers", "American"],
-          "location": "Secunderabad",
-          "price": "₹59",
+  //       },
+  //       {
+  //         "id": 4,
+  //         "name": "Burger King",
+  //         "rating": 4.2,
+  //         "deliveryTime": "30-35 mins",
+  //         "cuisine": ["Burgers", "American"],
+  //         "location": "Secunderabad",
+  //         "price": "₹59",
           
-        },
-  ];
+  //       },
+  // ];
 
-  const [RestaurantList,setRestaurantList] =useState([
-     {
-        "id": 1,
-        "name": "McDonald's",
-        "rating": 1.6,
-        "deliveryTime": "25-30 mins",
-        "cuisine": ["Burgers", "Beverages", "Cafe"],
-        "location": "Ameerpet metro, L&T Metro Rail",
-        "price": "₹119",
+  // const [RestaurantList,setRestaurantList] =useState([
+  //    {
+  //       "id": 1,
+  //       "name": "McDonald's",
+  //       "rating": 1.6,
+  //       "deliveryTime": "25-30 mins",
+  //       "cuisine": ["Burgers", "Beverages", "Cafe"],
+  //       "location": "Ameerpet metro, L&T Metro Rail",
+  //       "price": "₹119",
        
-      },
-      {
-          "id": 2,
-          "name": "KFC",
-          "rating": 1.9,
-          "deliveryTime": "40-45 mins",
-          "cuisine": ["Burgers", "Fast Food", "Rolls"],
-          "location": "Concourse Level",
-          "price": "₹59",
+  //     },
+  //     {
+  //         "id": 2,
+  //         "name": "KFC",
+  //         "rating": 1.9,
+  //         "deliveryTime": "40-45 mins",
+  //         "cuisine": ["Burgers", "Fast Food", "Rolls"],
+  //         "location": "Concourse Level",
+  //         "price": "₹59",
           
-        },
-        {
-          "id": 3,
-          "name": "Pizza Hut",
-          "rating": 4.1,
-          "deliveryTime": "40-45 mins",
-          "cuisine": ["Pizzas"],
-          "location": "SR Nagar",
-          "price": "₹99",
+  //       },
+  //       {
+  //         "id": 3,
+  //         "name": "Pizza Hut",
+  //         "rating": 4.1,
+  //         "deliveryTime": "40-45 mins",
+  //         "cuisine": ["Pizzas"],
+  //         "location": "SR Nagar",
+  //         "price": "₹99",
           
-        },
-        {
-          "id": 4,
-          "name": "Burger King",
-          "rating": 4.2,
-          "deliveryTime": "30-35 mins",
-          "cuisine": ["Burgers", "American"],
-          "location": "Secunderabad",
-          "price": "₹59",
+  //       },
+  //       {
+  //         "id": 4,
+  //         "name": "Burger King",
+  //         "rating": 4.2,
+  //         "deliveryTime": "30-35 mins",
+  //         "cuisine": ["Burgers", "American"],
+  //         "location": "Secunderabad",
+  //         "price": "₹59",
           
-        }
-  ] );
+  //       }
+  // ] );
 
+  const [RestaurantList,setRestaurantList] = useState(mockRestaurantList);
 
   return (
     <>
@@ -130,6 +130,7 @@ const Body = () => {
   location={res.location}             // ✅ from data
   price={res.price}                   // ✅ from data
   deliveryTime={res.deliveryTime} 
+  image= {res.image}
             />
           ))}
         </div>

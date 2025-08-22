@@ -1,10 +1,10 @@
 import { Img2, Img3, Img4, Img5, Img6, IMG_1 } from "./constant";
 
-const RestaurantList =[
+const mockRestaurantList =[
   {
     "id": 1,
     "name": "McDonald's",
-    "rating": 4.6,
+    "rating": 1.6,
     "deliveryTime": "25-30 mins",
     "cuisine": ["Burgers", "Beverages", "Cafe"],
     "location": "Ameerpet metro, L&T Metro Rail",
@@ -14,7 +14,7 @@ const RestaurantList =[
   {
     "id": 2,
     "name": "KFC",
-    "rating": 3.9,
+    "rating": 1.9,
     "deliveryTime": "40-45 mins",
     "cuisine": ["Burgers", "Fast Food", "Rolls"],
     "location": "Concourse Level",
@@ -44,7 +44,7 @@ const RestaurantList =[
   {
     "id": 5,
     "name": "Domino's Pizza",
-    "rating": 4.3,
+    "rating": 1.3,
     "deliveryTime": "30-40 mins",
     "cuisine": ["Pizza", "Italian"],
     "location": "Pan India",
@@ -54,7 +54,7 @@ const RestaurantList =[
   {
     "id": 6,
     "name": "Chinese Wok",
-    "rating": 4.0,
+    "rating": 1.0,
     "deliveryTime": "35-45 mins",
     "cuisine": ["Chinese", "Noodles"],
     "location": "Hyderabad Central",
@@ -64,7 +64,7 @@ const RestaurantList =[
   {
     "id": 7,
     "name": "Bakingo",
-    "rating": 4.5,
+    "rating": 1.5,
     "deliveryTime": "20-30 mins",
     "cuisine": ["Desserts", "Bakery"],
     "location": "Jubilee Hills",
@@ -74,7 +74,7 @@ const RestaurantList =[
   {
     "id": 8,
     "name": "California Burrito",
-    "rating": 4.4,
+    "rating": 1.4,
     "deliveryTime": "30-40 mins",
     "cuisine": ["Mexican", "Healthy Food"],
     "location": "Banjara Hills",
@@ -84,12 +84,12 @@ const RestaurantList =[
   {
     "id": 9,
     "name": "Subway",
-    "rating": 4.2,
+    "rating": 1.2,
     "deliveryTime": "25-35 mins",
     "cuisine": ["Sandwich", "Healthy Food"],
     "location": "Begumpet",
     "price": "₹89",
-    "image": "https://link.to/subway_image.jpg"
+    "image": Img2
   },
   {
     "id": 10,
@@ -99,22 +99,22 @@ const RestaurantList =[
     "cuisine": ["Barbecue", "North Indian"],
     "location": "Hitech City",
     "price": "₹199",
-    "image": "https://link.to/bbq_nation_image.jpg"
+    "image": Img5
   },
   {
     "id": 11,
     "name": "Behrouz Biryani",
-    "rating": 4.5,
+    "rating": 1.5,
     "deliveryTime": "35-45 mins",
     "cuisine": ["Biryani", "Mughlai"],
     "location": "Madhapur",
     "price": "₹149",
-    "image": "https://link.to/behrouz_biryani_image.jpg"
+    "image": Img3
   },
   {
     "id": 12,
     "name": "Faasos",
-    "rating": 4.1,
+    "rating": 1.1,
     "deliveryTime": "30-35 mins",
     "cuisine": ["Wraps", "Rolls"],
     "location": "Somajiguda",
@@ -124,7 +124,7 @@ const RestaurantList =[
   {
     "id": 13,
     "name": "Oven Story Pizza",
-    "rating": 4.2,
+    "rating": 1.2,
     "deliveryTime": "30-40 mins",
     "cuisine": ["Pizza", "Italian"],
     "location": "Kondapur",
@@ -134,7 +134,7 @@ const RestaurantList =[
   {
     "id": 14,
     "name": "Sweet Truth",
-    "rating": 4.3,
+    "rating": 1.3,
     "deliveryTime": "25-35 mins",
     "cuisine": ["Desserts", "Cakes"],
     "location": "Gachibowli",
@@ -142,4 +142,4 @@ const RestaurantList =[
     "image": "https://link.to/sweettruth_image.jpg"
   }
 ]
-export default RestaurantList;
+export default mockRestaurantList;
