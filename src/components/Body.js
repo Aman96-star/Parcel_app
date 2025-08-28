@@ -97,7 +97,10 @@ const Body = () => {
   //       }
   // ] );
 
-  const [RestaurantList,setRestaurantList] = useState(mockRestaurantList);
+  // const [RestaurantList,setRestaurantList] = useState(mockRestaurantList);/
+
+  const arr =useState(mockRestaurantList);
+  const [RestaurantList,setRestaurantList] =arr;
 
   return (
     <>
