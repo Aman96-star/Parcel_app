@@ -100,7 +100,24 @@ const Body = () => {
   // const [RestaurantList,setRestaurantList] = useState(mockRestaurantList);/
 
   const arr =useState(mockRestaurantList);
-  const [RestaurantList,setRestaurantList] =arr;
+  // const [RestaurantList,setRestaurantList] =arr;
+  const RestaurantList =arr[0];
+  const setRestaurantList =arr[1];
+
+  // we are using useeffect hook
+  useEffect(()=>{
+    fetchData();
+  },[])
+
+  // console.log("now body is rendered"); this prove that after all the rendering useeffect is work
+  
+  const fetchData =async ()=>{
+    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING");
+
+     const json = await data.json();
+
+     console.log(json);
+  }
 
   return (
     <>

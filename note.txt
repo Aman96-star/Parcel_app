@@ -70,3 +70,27 @@ root.render(<Compo/>); // ✅ Pass the element here
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(container);
 
+                                 // all about useefect hook
+1. Component render phase
+When your component function runs:
+This line executes immediately during rendering (before React commits the UI to the DOM)
+So this proves that normal JS code inside your component runs first.
+
+2.Commit phase → then useEffect
+useEffect runs after the render is painted on the screen.
+
+React first builds the UI tree → commits it to the DOM → then runs effects.
+
+That’s why you see "now body is rendered" first in the console, and only after that "useEffect is called in the console".
+
+3. Why this order?
+
+Because useEffect is meant for side effects (things outside rendering, like:
+
+fetching data
+
+subscriptions
+
+DOM updates
+
+timers
