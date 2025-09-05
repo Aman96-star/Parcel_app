@@ -99,7 +99,7 @@ const Body = () => {
 
   // const [RestaurantList,setRestaurantList] = useState(mockRestaurantList);/
 
-  const arr =useState(mockRestaurantList);
+  const arr =useState([]);
   // const [RestaurantList,setRestaurantList] =arr;
   const RestaurantList =arr[0];
   const setRestaurantList =arr[1];
@@ -117,6 +117,14 @@ const Body = () => {
      const json = await data.json();
 
      console.log(json);
+//      console.log(json.data.cards); // see all 12 cards
+// console.log(json.data.cards[2]); // check what’s inside index 2
+// console.log(json.data.cards[6].card.card.facetList[1]); // check deeper
+     setRestaurantList(json.data.cards[3].card.card.brands[2]);
+    // setRestaurantList(json?.data?.cards[2]?.card?.card);
+   
+
+
   }
 
   return (
@@ -160,3 +168,4 @@ const Body = () => {
 };
 
 export default Body;
+// sdfjnososdo

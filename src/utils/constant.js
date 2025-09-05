@@ -4,4 +4,3 @@ export const Img3 ="https://res.cloudinary.com/dng2nnvlc/image/upload/v175430636
 export const Img4 ="https://res.cloudinary.com/dng2nnvlc/image/upload/v1754306367/dessert_nmrsfo.jpg"
 export const Img5 ="https://res.cloudinary.com/dng2nnvlc/image/upload/v1754306367/taco_qduziv.jpg"
 export const Img6 ="https://res.cloudinary.com/dng2nnvlc/image/upload/v1754306371/omlet_acfixu.jpg"
-// wedwped
