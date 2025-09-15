@@ -3,129 +3,23 @@ import ResturantCard from "./Resturantcard";
 import { useEffect, useState } from "react";
 
 const Body = () => {
-// hooks  state vriable
+// const [RestaurantList, setRestaurantList] = useState(mockRestaurantList); 
 
-// normal js utility function
-// -useEffect()  --- superpowerful state variable variable 
-// -usestate ()
+//  use a fetch api 
 
-
-  // normal js variable
-  // let RestaurantListjs =[
-  //     {
-  //       "id": 1,
-  //       "name": "McDonald's",
-  //       "rating": 1.6,
-  //       "deliveryTime": "25-30 mins",
-  //       "cuisine": ["Burgers", "Beverages", "Cafe"],
-  //       "location": "Ameerpet metro, L&T Metro Rail",
-  //       "price": "₹119",
-       
-  //     },
-  //       {
-  //         "id": 2,
-  //         "name": "KFC",
-  //         "rating": 1.9,
-  //         "deliveryTime": "40-45 mins",
-  //         "cuisine": ["Burgers", "Fast Food", "Rolls"],
-  //         "location": "Concourse Level",
-  //         "price": "₹59",
-          
-  //       },
-  //       {
-  //         "id": 3,
-  //         "name": "Pizza Hut",
-  //         "rating": 4.1,
-  //         "deliveryTime": "40-45 mins",
-  //         "cuisine": ["Pizzas"],
-  //         "location": "SR Nagar",
-  //         "price": "₹99",
-          
-  //       },
-  //       {
-  //         "id": 4,
-  //         "name": "Burger King",
-  //         "rating": 4.2,
-  //         "deliveryTime": "30-35 mins",
-  //         "cuisine": ["Burgers", "American"],
-  //         "location": "Secunderabad",
-  //         "price": "₹59",
-          
-  //       },
-  // ];
-
-  // const [RestaurantList,setRestaurantList] =useState([
-  //    {
-  //       "id": 1,
-  //       "name": "McDonald's",
-  //       "rating": 1.6,
-  //       "deliveryTime": "25-30 mins",
-  //       "cuisine": ["Burgers", "Beverages", "Cafe"],
-  //       "location": "Ameerpet metro, L&T Metro Rail",
-  //       "price": "₹119",
-       
-  //     },
-  //     {
-  //         "id": 2,
-  //         "name": "KFC",
-  //         "rating": 1.9,
-  //         "deliveryTime": "40-45 mins",
-  //         "cuisine": ["Burgers", "Fast Food", "Rolls"],
-  //         "location": "Concourse Level",
-  //         "price": "₹59",
-          
-  //       },
-  //       {
-  //         "id": 3,
-  //         "name": "Pizza Hut",
-  //         "rating": 4.1,
-  //         "deliveryTime": "40-45 mins",
-  //         "cuisine": ["Pizzas"],
-  //         "location": "SR Nagar",
-  //         "price": "₹99",
-          
-  //       },
-  //       {
-  //         "id": 4,
-  //         "name": "Burger King",
-  //         "rating": 4.2,
-  //         "deliveryTime": "30-35 mins",
-  //         "cuisine": ["Burgers", "American"],
-  //         "location": "Secunderabad",
-  //         "price": "₹59",
-          
-  //       }
-  // ] );
-
-  // const [RestaurantList,setRestaurantList] = useState(mockRestaurantList);/
-
-  const arr =useState([]);
-  // const [RestaurantList,setRestaurantList] =arr;
-  const RestaurantList =arr[0];
-  const setRestaurantList =arr[1];
-
-  // we are using useeffect hook
-  useEffect(()=>{
-    fetchData();
-  },[])
-
-  // console.log("now body is rendered"); this prove that after all the rendering useeffect is work
-  
-  const fetchData =async ()=>{
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING");
-
-     const json = await data.json();
-
-     console.log(json);
-//      console.log(json.data.cards); // see all 12 cards
-// console.log(json.data.cards[2]); // check what’s inside index 2
-// console.log(json.data.cards[6].card.card.facetList[1]); // check deeper
-     setRestaurantList(json.data.cards[3].card.card.brands[2]);
-    // setRestaurantList(json?.data?.cards[2]?.card?.card);
-   
+const [RestaurantList, setRestaurantList] = useState([]); 
 
 
-  }
+useEffect(() => {
+  fetchData();
+}, []);
+
+const fetchData = async () => {
+  const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.38430&lng=78.45830&collection=83639&tags=layout_CCS_Biryani&sortBy=&filters=&type=rcv2&offset=0&page_type=null");
+  const json = await data.json();
+  setRestaurantList(json?.data?.cards[2]);
+};
+
 
   return (
     <>
@@ -168,5 +62,3 @@ const Body = () => {
 };
 
 export default Body;
-// sdfjnososdo
-// fdfs
