@@ -17,7 +17,7 @@ useEffect(() => {
 const fetchData = async () => {
   const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.38430&lng=78.45830&collection=83639&tags=layout_CCS_Biryani&sortBy=&filters=&type=rcv2&offset=0&page_type=null");
   const json = await data.json();
-  setRestaurantList(json?.data?.cards[2]);
+  setRestaurantList( json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
 };
 
 

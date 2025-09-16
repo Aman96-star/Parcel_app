@@ -96,17 +96,3 @@ DOM updates
 timers
 
 
-//          how to fetch api 
-
-const fetchData =async ()=>{
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING");
-
-     const json = await data.json();
-
-     console.log(json);
-//      console.log(json.data.cards); // see all 12 cards
-// console.log(json.data.cards[2]); // check what’s inside index 2
-// console.log(json.data.cards[6].card.card.facetList[1]); // check deeper
-     setRestaurantList(json.data.cards[3].card.card.brands[2]);
-    // setRestaurantList(json?.data?.cards[2]?.card?.card);
-   
